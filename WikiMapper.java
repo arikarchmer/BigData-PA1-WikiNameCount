@@ -14,9 +14,9 @@ import org.apache.hadoop.mapreduce.Mapper.Context;
  * that all the names in the people.txt file are two tokens. Big simplification, I know,
  * but it had to be done (I was pressed for time). It implements the map method,
  * which gets the Text values, which is a line from the file, then tokenizes the line.
- * In the while loop, every subset of two consecutive tokens is examined, and then and output 
+ * In the while loop, every subset of two consecutive tokens is examined, and then an output 
  * is constructed by creating a potential name out of the two tokens. This potential name
- * is paired with and IntWritable value of two, so that the reducer will then know this name 
+ * is paired with an IntWritable value of two, so that the reducer will then know this name 
  * came from the wiki file. This pair is then written to the Context object.
  */
 public class WikiMapper extends Mapper<Object, Text, Text, IntWritable> {

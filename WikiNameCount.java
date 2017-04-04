@@ -1,6 +1,7 @@
 package mapreduce;
 
 import java.io.IOException;
+
 import java.util.StringTokenizer;
 
 import org.apache.hadoop.io.IntWritable;
@@ -28,7 +29,7 @@ import org.apache.hadoop.fs.Path;
  * Then the I let hadoop know that 'WikiNameCount.class' will be the main class. Then, I set the map
  * output as a key value pair (k, v) with types (Text, IntWritable). The job will have multiple inputs
  * (wiki file and people.txt), so I set the first parameter to be the wiki, and the second to be the people
- * by telling hadoop to use the wikimapper then the peoplemapper respectively. Finally I set the 
+ * and then tell hadoop to use the WikiMapper then the PeopleMapper respectively. Finally, I set the 
  * reducer to output a pair of (NullWritable, Text), and set the output path for hadoop in the hdfs.
  */
 public class WikiNameCount extends Configured {
